@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-  <link rel="stylesheet" href="FrontenndCss/style.css"></head>
-
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
 <body> 
     <nav class="navbar">
         <div class="logo">
             AI Workflow Hub
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="AiWorkFlow.html">AI Workflows</a></li>
             <li><a href="AiToools.html">AI Tools</a></li>
             <li><a href="Promptlibrary.html">Prompt Library</a></li>
@@ -22,14 +21,12 @@
         </ul>
 
         <div class="auth-buttons">
-            <a href="Login.html" class="login">Login</a>
-            <a href="signup.html" class="signup">Sign Up</a>
+<a href="/login" class="login">Login</a>
+<a href="/signup" class="signup">Sign Up</a>
         </div>
 
     </nav>
     <section class="hero">
-
-   <section class="hero">
 
     <div class="hero-visual">
 
@@ -40,7 +37,7 @@
             loop
             playsinline
         >
-            <source src="home_page_video.mp4.mp4" type="video/mp4">
+            <source src="/video/home_page_video.mp4.mp4" type="video/mp4">
         </video>
 
     </div>
@@ -61,16 +58,18 @@
             designed for your profession and goals.
         </p>
 
-        <div class="hero-search">
+        <form class="hero-search" method="POST" action="/search">
 
-            <input
-                type="text"
-                placeholder="What do you want to accomplish?"
-            >
+    <input
+        type="text"
+        name="search"
+        placeholder="What do you want to accomplish?"
+        required
+    >
 
-            <button>Find Workflow</button>
+    <button type="submit">Find Workflow</button>
 
-        </div>
+</form>
 
         <div class="popular-searches">
 
@@ -86,7 +85,7 @@
     </div>
 
 </section>
-        </video>
+        
 
     </div>
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-<link rel="stylesheet" href="FrontenndCss/style.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <nav class="navbar">
@@ -13,7 +13,7 @@
             AI Workflow Hub
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="AiWorkFlow.html">AI Workflows</a></li>
             <li><a href="AiToools.html">AI Tools</a></li>
             <li><a href="Promptlibrary.html">Prompt Library</a></li>
@@ -22,8 +22,8 @@
         </ul>
 
         <div class="auth-buttons">
-            <a href="Login.html" class="login">Login</a>
-            <a href="signup.html" class="signup">Sign Up</a>
+           <a href="/login" class="login">Login</a>
+           <a href="/signup" class="signup">Sign Up</a>
         </div>
 
     </nav>
@@ -42,8 +42,7 @@
             </div>
 
 
-            <form class="signup-form">
-
+<form class="signup-form" method="POST" action="/signup">
                 <div class="form-group">
 
                     <label for="fullname">
