@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            AI Workflow Hub
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="AiWorkFlow.html">AI Workflows</a></li>
+            <li><a href="AiToools.html">AI Tools</a></li>
+            <li><a href="Promptlibrary.html">Prompt Library</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="Templates.html">Templates</a></li>
+        </ul>
+
+        <div class="auth-buttons">
+           <a href="/login" class="login">Login</a>
+           <a href="/signup" class="signup">Sign Up</a>
+        </div>
+
+    </nav>
+    <section class="signup-section">
+
+        <div class="signup-container">
+
+            <div class="signup-header">
+
+                <h1>Create Your Account</h1>
+
+                <p>
+                    Join AI Workflow Hub and work smarter with AI
+                </p>
+
+            </div>
+
+
+<form class="signup-form" method="POST" action="/signup">
+                <div class="form-group">
+
+                    <label for="fullname">
+                        Full Name
+                    </label>
+
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="confirm-password">
+                        Confirm Password
+                    </label>
+
+                    <input type="password" id="confirm-password" name="confirm-password"
+                        placeholder="Confirm your password" required>
+
+                </div>
+
+
+                <label class="terms">
+
+                    <input type="checkbox" name="terms" required>
+
+                    <span>
+                        I agree to the
+                        <a href="#">Terms & Conditions</a>
+                        and
+                        <a href="#">Privacy Policy</a>
+                    </span>
+
+                </label>
+
+
+                <button type="submit" class="signup-submit">
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <div class="login-link">
+
+                <p>
+                    Already have an account?
+                    <a href="Login.html">Login</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
