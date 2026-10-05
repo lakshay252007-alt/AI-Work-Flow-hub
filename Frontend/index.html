@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body> 
+    <nav class="navbar">
+        <div class="logo">
+            AI Workflow Hub
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="AiWorkFlow.html">AI Workflows</a></li>
+            <li><a href="AiToools.html">AI Tools</a></li>
+            <li><a href="Promptlibrary.html">Prompt Library</a></li>
+            <li><a href="Resources.html">Resources</a></li>
+            <li><a href="Templates.html">Templates</a></li>
+        </ul>
+
+        <div class="auth-buttons">
+<a href="/login" class="login">Login</a>
+<a href="/signup" class="signup">Sign Up</a>
+        </div>
+
+    </nav>
+    <section class="hero">
+
+    <div class="hero-visual">
+
+        <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+        >
+            <source src="/video/home_page_video.mp4.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+    <div class="hero-content">
+
+        <span class="hero-tag">AI-Powered Workflows</span>
+
+        <h1>
+            Find the Right AI
+            <span>Workflow</span>
+            for Your Work
+        </h1>
+
+        <p>
+            Stop searching through hundreds of AI tools.
+            Discover practical, step-by-step AI workflows
+            designed for your profession and goals.
+        </p>
+
+        <form class="hero-search" method="POST" action="/search">
+
+    <input
+        type="text"
+        name="search"
+        placeholder="What do you want to accomplish?"
+        required
+    >
+
+    <button type="submit">Find Workflow</button>
+
+</form>
+
+        <div class="popular-searches">
+
+            <span>Popular:</span>
+
+            <a href="#">Build a Website</a>
+            <a href="#">React Developer</a>
+            <a href="#">SEO</a>
+            <a href="#">Content Creation</a>
+
+        </div>
+
+    </div>
+
+</section>
+        
+
+    </div>
+
+</section>
+</body>
+
+</html>
